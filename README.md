@@ -20,9 +20,9 @@
 # Part 2 - Function Master
 
 ## Review Questions from Module One Handbook?
- - what can we `typeof` ?
- - what can't we `typeof` ?
- - how do we check those things?
+ - what can we `typeof` ? simple data
+ - what can't we `typeof` ? objects
+ - how do we check those things? isObject()
  - Array.isArray()
  - null === null
 

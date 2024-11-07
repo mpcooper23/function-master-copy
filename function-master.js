@@ -4,6 +4,9 @@
 
 function objectValues(object) {
     // code
+    let objArr = []
+    object[key] += objArr
+    return objArr
 } 
 
 //////////////////////////////////////////////////////////////////////
