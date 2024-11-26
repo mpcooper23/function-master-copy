@@ -5,7 +5,7 @@
 function objectValues(object) {
     // code
     let objArr = []
-    object[key] += objArr
+    objArr.push(object[key])
     return objArr
 } 
 
