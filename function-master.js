@@ -16,7 +16,10 @@ function objectValues(object) {
 
 function keysToString(object) {
 let objStr = '';
-return objStr += object[key];
+for(let key in object){
+objStr += key + ' '
+}
+return objStr.trim()
 }
 
 //////////////////////////////////////////////////////////////////////
