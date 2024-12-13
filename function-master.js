@@ -5,7 +5,8 @@
 function objectValues(object) {
     // code
     let objArr = []
-    objArr.push(object[key])
+    for(let key in object){
+    objArr.push(object[key])}
     return objArr
 } 
 
@@ -15,8 +16,7 @@ function objectValues(object) {
 
 function keysToString(object) {
 let objStr = '';
-let keys = objStr += object[key];
-return keys
+return objStr += object[key];
 }
 
 //////////////////////////////////////////////////////////////////////
