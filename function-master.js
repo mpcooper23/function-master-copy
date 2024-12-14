@@ -64,16 +64,27 @@ function capitalizeWord(string) {
 //////////////////////////////////////////////////////////////////////
 
 function capitalizeAllWords(string) {
-    
+    let allCaps = [];
+    let words = string.split(' ');
+    for(let i = 0; i < words.length; i++){
+        let capStr = words[i][0].toUpperCase() + words[i].slice(1);
+        allCaps.push(capStr)
+    }
+    return allCaps.join(' ')
 }
 
 //////////////////////////////////////////////////////////////////////
 // Function 7 - Welcome Message //////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+//Should take an object with a name property and return
+ // 'Welcome <Name>'
+
 function welcomeMessage(object) {
-if(object.name){
-    return `Welcome ${object.name}`
+    for(let key in object){
+    if (object[key] === object.name){
+    return `Welcome ${object.name}!`
+    }
 }
 }
 
@@ -82,13 +93,20 @@ if(object.name){
 // Function 8 - Profile Info /////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-function profileInfo(object) {
+//Should take an object with a name and a species and return '<Name> is
+ // a <Species>`
 
+function profileInfo(object) {
+    return `${object.name} is a ${object.species}`
 }
 
 //////////////////////////////////////////////////////////////////////
 // Function 9 - Maybe Noises /////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+
+//should take an object, if this object has a noises array return them
+ //as a string separated by a space; if there are no noises, return 
+  //"there are no noises"
 
 function maybeNoises(object) {
 
@@ -98,6 +116,9 @@ function maybeNoises(object) {
 // Function 10 - Has Words ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+//Should take a string of words and a word and return TRUE if <word>
+ //is in <string> of words; else, return FALSE
+
 function hasWord(string, word) {
 
 }
@@ -105,6 +126,9 @@ function hasWord(string, word) {
 //////////////////////////////////////////////////////////////////////
 // Function 11 - Add Friend //////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+
+//Should take a name and an object and add the name to the object's friends 
+ //array, and then return the object. 
 
 function addFriend (name, object) {
 
@@ -114,6 +138,8 @@ function addFriend (name, object) {
 // Function 12 - Is Friend ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+//Shoudl take a name and an object
+
 function isFriend(name, object) {
 
 }
@@ -121,6 +147,9 @@ function isFriend(name, object) {
 //////////////////////////////////////////////////////////////////////
 // Function 13 - Non-Friends /////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+
+//Should take a name and an array (i.e. a list of people), and return a list
+ //of all the names that <name> is not friends with.
 
 function nonFriends(name, array) {
 
@@ -130,6 +159,9 @@ function nonFriends(name, array) {
 // Function 14 - Update Object ///////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+//Shoud take an object, a key and a value. Should update the property 
+ // <key> on <object> with new <value>
+
 function updateObject(object, key, value) {
 
 }
@@ -138,6 +170,9 @@ function updateObject(object, key, value) {
 // Function 15 - Remove Properties ///////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+//Should take an object and an array of strings. Should removed any 
+ //properties on <object> that are listed in <array>
+
 function removeProperties(object, array) {
 
 }
@@ -145,6 +180,8 @@ function removeProperties(object, array) {
 //////////////////////////////////////////////////////////////////////
 // Function 16 - Dedup ///////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+
+//Should take an array and return an array with all of the duplicates removed. 
 
 function dedup(array) {
 
