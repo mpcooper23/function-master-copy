@@ -2,6 +2,8 @@
 // Function 1 - Object Values ////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+//const { isObject } = require("lodash");
+
 function objectValues(object) {
     // code
     let objArr = []
@@ -29,7 +31,9 @@ return objStr.trim()
 function valuesToString(object) {
     let valStr = '';
 for (let key in object){
-    valStr += String(object[key]) + ' ';
+    if(typeof object[key] === 'string'){
+    valStr += object[key] + ' ';
+}
 }
 return valStr.trim()
 }
@@ -39,7 +43,12 @@ return valStr.trim()
 //////////////////////////////////////////////////////////////////////
 
 function arrayOrObject(collection) {
-    
+    if(Array.isArray(collection)){
+        return 'array'
+    }
+    if(typeof collection === 'object' && collection !== null){
+        return 'object'
+    }
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -47,7 +56,7 @@ function arrayOrObject(collection) {
 //////////////////////////////////////////////////////////////////////
 
 function capitalizeWord(string) {
-    
+    return string[0].toUpperCase() + string.slice(1)
 }
 
 //////////////////////////////////////////////////////////////////////
