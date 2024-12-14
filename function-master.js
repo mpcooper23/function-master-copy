@@ -73,7 +73,11 @@ function capitalizeAllWords(string) {
 
 function welcomeMessage(object) {
 
+if(object.name){
+    return `Welcome ${object.name}`
 }
+}
+
 
 //////////////////////////////////////////////////////////////////////
 // Function 8 - Profile Info /////////////////////////////////////////
