@@ -72,7 +72,6 @@ function capitalizeAllWords(string) {
 //////////////////////////////////////////////////////////////////////
 
 function welcomeMessage(object) {
-
 if(object.name){
     return `Welcome ${object.name}`
 }
