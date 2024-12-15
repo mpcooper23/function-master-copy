@@ -206,7 +206,12 @@ return object;
  //properties on <object> that are listed in <array>
 
 function removeProperties(object, array) {
-
+for (let key in object){
+    if(array.includes(key)){
+delete object[key]
+    }
+}
+return object
 }
 
 //////////////////////////////////////////////////////////////////////
