@@ -138,7 +138,8 @@ function addFriend (name, object) {
 // Function 12 - Is Friend ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-//Shoudl take a name and an object
+//Shoudl take a name and an object and return true if <name> is a friend
+// of object and <false> otherwise
 
 function isFriend(name, object) {
 
