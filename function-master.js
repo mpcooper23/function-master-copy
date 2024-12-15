@@ -109,7 +109,11 @@ function profileInfo(object) {
   //"there are no noises"
 
 function maybeNoises(object) {
-
+if (object.noises && object.noise.length > 0){
+    return object.noises.join(" ")
+}else {
+    return 'there are no noises'
+}
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -120,6 +124,13 @@ function maybeNoises(object) {
  //is in <string> of words; else, return FALSE
 
 function hasWord(string, word) {
+    for (let i = 0; i < string.length; i++){
+        if (string[i] === word){
+            return true
+        }else {
+            return false
+        }
+    }
 
 }
 
@@ -138,7 +149,7 @@ function addFriend (name, object) {
 // Function 12 - Is Friend ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-//Shoudl take a name and an object and return true if <name> is a friend
+//Should take a name and an object and return true if <name> is a friend
 // of object and <false> otherwise
 
 function isFriend(name, object) {
@@ -160,7 +171,7 @@ function nonFriends(name, array) {
 // Function 14 - Update Object ///////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-//Shoud take an object, a key and a value. Should update the property 
+//Should take an object, a key and a value. Should update the property 
  // <key> on <object> with new <value>
 
 function updateObject(object, key, value) {
