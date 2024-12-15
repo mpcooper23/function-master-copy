@@ -177,7 +177,13 @@ if(object.friends[i] === name){
  //of all the names that <name> is not friends with.
 
 function nonFriends(name, array) {
-
+    let notFriends = [];
+for(let i = 0; i < array.length; i++){
+    if (array[i].name !== name && !array[i].friends.includes(name)){
+        notFriends.push(array[i].name)
+    }
+}
+return notFriends
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -188,7 +194,8 @@ function nonFriends(name, array) {
  // <key> on <object> with new <value>
 
 function updateObject(object, key, value) {
-
+object[key] = value;
+return object;
 }
 
 //////////////////////////////////////////////////////////////////////
