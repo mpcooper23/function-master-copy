@@ -124,8 +124,9 @@ if (object.noises && object.noise.length > 0){
  //is in <string> of words; else, return FALSE
 
 function hasWord(string, word) {
-    for (let i = 0; i < string.length; i++){
-        if (string[i] === word){
+    let words = string.split(' ')
+    for (let i = 0; i < words.length; i++){
+        if (words[i] === word){
             return true
         }else {
             return false
@@ -142,19 +143,31 @@ function hasWord(string, word) {
  //array, and then return the object. 
 
 function addFriend (name, object) {
-
+    if (Array.isArray(object.friends)){
+        object.friends.push(name)
+    }
+return object 
 }
 
 //////////////////////////////////////////////////////////////////////
 // Function 12 - Is Friend ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-//Should take a name and an object and return true if <name> is a friend
-// of object and <false> otherwise
+//Should take a name and an object and add the name to the object's friends 
+ //array, and then return the object. 
 
-function isFriend(name, object) {
-
+ function isFriend (name, object) {
+    if(Array.isArray(object.friends)){
+    for (let i = 0; i < object.friends.length; i++){
+if(object.friends[i] === name){
+    return true
 }
+    
+        }
+    }
+    return false;
+}
+
 
 //////////////////////////////////////////////////////////////////////
 // Function 13 - Non-Friends /////////////////////////////////////////
