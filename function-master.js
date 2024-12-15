@@ -221,7 +221,7 @@ return object
 //Should take an array and return an array with all of the duplicates removed. 
 
 function dedup(array) {
-
+array.map()
 }
 
 //////////////////////////////////////////////////////////////////////
