@@ -81,12 +81,10 @@ function capitalizeAllWords(string) {
  // 'Welcome <Name>'
 
 function welcomeMessage(object) {
-    for(let key in object){
-    if (object[key] === object.name){
-    return `Welcome ${object.name}!`
+    return 'Welcome ' + object.name + '!'
     }
-}
-}
+//}
+//}
 
 
 //////////////////////////////////////////////////////////////////////
